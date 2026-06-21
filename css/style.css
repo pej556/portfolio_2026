@@ -1,0 +1,852 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+body {
+  background: #000;
+  font-family: "Montserrat";
+  overflow-x: hidden;
+}
+
+.wrap {
+  max-width: 80%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.inner {
+  max-width: 100%;
+  margin: auto;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.pre {
+  font-family: "Pretendard";
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 5rem;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+header > .hinner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  padding-top: 8px;
+  width: 80%;
+  margin: auto;
+}
+header nav ul {
+  display: flex;
+  gap: 15px;
+}
+header nav li:hover a {
+  color: gray;
+}
+header a {
+  color: #fff;
+  font-weight: normal;
+}
+header.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #393939;
+}
+
+.intro {
+  position: absolute;
+  top: 38%;
+  left: 11%;
+  z-index: 90;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.intro h3 {
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.swiper {
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.swiper ul {
+  display: flex;
+}
+.swiper li {
+  width: 100%;
+  height: 100vh;
+}
+
+#about {
+  margin-top: 20%;
+}
+#about h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10%;
+}
+#about .profile img {
+  background: #0088FF;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
+}
+#about .profile {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 7%;
+  width: 70rem;
+  margin: auto;
+}
+#about .profile .profile_txt p {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 70px;
+}
+#about .profile .profile_txt table tr {
+  line-height: 3;
+}
+#about .profile .profile_txt table tr th {
+  text-align: left;
+  font-weight: 600;
+  color: #0088FF;
+  font-size: 1.2rem;
+}
+#about .profile .profile_txt table tr td {
+  padding-left: 50px;
+  font-size: 1.2rem;
+}
+#about .info1 {
+  width: 70rem;
+  margin: auto;
+  padding: 0 5%;
+  margin-top: 4%;
+}
+#about .info1 h2 {
+  color: #0088FF;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 3%;
+}
+#about .info1 table tr th {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px 0;
+}
+#about .info1 table tr td {
+  color: #ddd;
+  font-size: 1.2rem;
+  text-align: right;
+}
+#about .info2 {
+  width: 70rem;
+  margin: auto;
+  padding: 0 5%;
+  margin-top: 4%;
+}
+#about .info2 h2 {
+  color: #0088FF;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 3%;
+}
+#about .info2 table tr th {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px 0;
+}
+#about .info2 table tr td {
+  color: #ddd;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+#skill {
+  width: 100%;
+  margin: auto;
+  margin-top: 20%;
+}
+#skill h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
+#skill ul {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+#skill li {
+  flex: 1 1 180px;
+  max-width: 130px;
+  box-sizing: border-box;
+}
+#skill li:hover img {
+  opacity: 0.8;
+}
+#skill img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100px;
+}
+
+#project {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  margin-top: 10%;
+}
+#project a {
+  color: #fff;
+}
+#project h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+#project > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+#project .li {
+  margin-bottom: 6%;
+  background: #000;
+  border: 1px solid #000;
+  padding: 1.5%;
+  transition: all 0.2s ease-in-out;
+}
+#project .li:hover {
+  transform: translateY(-2%);
+  background: #0A0A0A;
+  border: 1px solid #393939;
+}
+#project img {
+  margin-bottom: 4%;
+}
+#project .text {
+  line-height: 1.5;
+}
+#project .text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2%;
+}
+#project .text em {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.project_click {
+  width: 40%;
+  height: auto;
+  border: 1px solid #393939;
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 999;
+  background: #0A0A0A;
+  padding: 2%;
+  font-size: 16px;
+}
+.project_click li {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0%;
+}
+.project_click h5 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.project_click em {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+.project_click button {
+  background: none;
+  border: 1px solid #393939;
+  color: #fff;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.project_click p {
+  width: 100%;
+  height: auto;
+}
+.project_click table {
+  margin: 10px 0 10px;
+}
+.project_click table th {
+  text-align: left;
+  font-weight: 500;
+}
+.project_click table td {
+  text-align: right;
+  color: #aaa;
+}
+.project_click span {
+  display: block;
+  width: 100%;
+  word-break: keep-all;
+  line-height: 20px;
+  font-weight: 300;
+}
+.project_click .button {
+  margin-top: 30px;
+}
+.project_click a {
+  border: 1px solid #fff;
+  display: block;
+  width: 30%;
+  padding: 3%;
+  text-align: center;
+  color: #fff;
+  transition: all 0.15s ease-in-out;
+}
+.project_click a:hover {
+  background: #fff;
+  color: #000;
+}
+
+footer {
+  margin-top: 10%;
+  background: #111;
+  text-align: center;
+  height: 150px;
+}
+footer .ftxt {
+  padding-top: 50px;
+}
+footer .ftxt span {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+footer .ftxt p {
+  color: #aaa;
+  font-size: 0.8rem;
+  padding-top: 15px;
+}
+
+/* 화면 너비가 1600px 이하일떄 */
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
+  html .intro {
+    font-size: 2.2rem;
+  }
+  html #about .profile {
+    width: 60rem;
+  }
+  html #skill ul li {
+    min-width: 7rem;
+  }
+  html #project ul {
+    grid-template-columns: 2fr 2fr;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 1650px 이하일떄 */
+@media screen and (max-width: 1550px) {
+  html {
+    font-size: 14px;
+  }
+  html .intro {
+    font-size: 2.2rem;
+  }
+  html #about .profile {
+    width: 60rem;
+  }
+  html .wrap .inner #skill ul {
+    gap: 50px;
+  }
+  html .wrap .inner #skill ul li {
+    min-width: 5rem;
+    max-width: 100px;
+  }
+  html #skill .inner ul li img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 90px;
+  }
+  html #project ul {
+    grid-template-columns: 2fr 2fr;
+  }
+  html .wrap .inner .intro {
+    top: 40%;
+    left: 11%;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 1500px 이하일떄 */
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 14px;
+  }
+  html .intro {
+    font-size: 2.2rem;
+  }
+  html #about .profile {
+    width: 60rem;
+  }
+  html .wrap .inner #skill ul {
+    gap: 50px;
+  }
+  html .wrap .inner #skill ul li {
+    min-width: 5rem;
+    max-width: 100px;
+  }
+  html #skill .inner ul li img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 90px;
+  }
+  html #project ul {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+/* 화면 너비가 1140px 이하일떄 */
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 14px;
+  }
+  html #about .profile {
+    width: 60rem;
+  }
+  html #about .info1 {
+    width: 60rem;
+  }
+  html #about .info2 {
+    width: 60rem;
+  }
+  html #skill ul {
+    flex-wrap: wrap;
+  }
+  html #skill ul li {
+    min-width: 5rem;
+  }
+  html #project ul {
+    grid-template-columns: 2fr 2fr;
+  }
+  html .wrap .inner .intro {
+    top: 40%;
+    left: 11%;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 992px 이하일떄 */
+@media screen and (max-width: 992px) {
+  html .inner #about .profile {
+    gap: 50px;
+  }
+  html {
+    font-size: 14px;
+  }
+  html #about .profile {
+    width: 50rem;
+  }
+  html #about .info1 {
+    width: 50rem;
+  }
+  html #about .info2 {
+    width: 50rem;
+  }
+  html #skill ul li {
+    min-width: 4.5rem;
+  }
+  html #project ul {
+    display: block;
+  }
+  html .wrap .inner .intro {
+    top: 40%;
+    left: 11%;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 768px 이하일떄 */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0 2rem;
+  }
+  html .inner #about .profile img {
+    margin: auto;
+  }
+  html .inner #about .profile {
+    display: block;
+  }
+  html .inner #about .profile p {
+    margin-bottom: 30px;
+  }
+  html .inner #about .profile table tr {
+    text-align: left;
+  }
+  html #about .profile {
+    width: 45rem;
+  }
+  html #about .info1 {
+    width: 45rem;
+  }
+  html #about .info2 {
+    width: 45rem;
+  }
+  html #skill ul li {
+    min-width: 3rem;
+  }
+  html #project ul {
+    display: block;
+  }
+  html .wrap .inner .intro {
+    top: 30%;
+    left: 11%;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 650px 이하일떄 */
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0 2rem;
+  }
+  html .inner #about .profile img {
+    margin: auto;
+  }
+  html .inner #about .profile {
+    display: block;
+  }
+  html .inner #about .profile p {
+    margin-bottom: 30px;
+  }
+  html #about .profile {
+    width: 40rem;
+  }
+  html #about .info1 {
+    width: 40rem;
+  }
+  html #about .info2 {
+    width: 40rem;
+  }
+  html #about .info1 table tr th, html #about .info2 table tr th {
+    font-size: 1.1rem;
+  }
+  html #about .info1 table tr td, html #about .info2 table tr td {
+    font-size: 1.1rem;
+  }
+}
+/* 화면 너비가 650px 이하일떄 */
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0 2rem;
+  }
+  html .inner #about .profile img {
+    margin: auto;
+  }
+  html .inner #about .profile {
+    display: block;
+  }
+  html .inner #about .profile p {
+    margin-bottom: 30px;
+  }
+  html #about .profile {
+    width: 40rem;
+  }
+  html #about .info1 {
+    width: 40rem;
+  }
+  html #about .info2 {
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0 2rem;
+  }
+  html .inner #about .profile img {
+    margin: auto;
+  }
+  html .inner #about .profile {
+    display: block;
+  }
+  html .inner #about .profile p {
+    margin-bottom: 30px;
+  }
+  html #about .profile {
+    width: 33rem;
+  }
+  html #about .info1 {
+    width: 33rem;
+  }
+  html #about .info2 {
+    width: 33rem;
+  }
+  html .inner #skill ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  html .wrap .inner .intro h3 {
+    font-size: 25px;
+  }
+  html .wrap .inner .intro p {
+    font-size: 30px;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+  html #about .info1 table tr, #about .info2 table tr {
+    line-height: 1.3;
+  }
+}
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0 2rem;
+  }
+  html .inner #about .profile img {
+    margin: auto;
+  }
+  html .inner #about .profile {
+    display: block;
+  }
+  html .inner #about .profile p {
+    margin-bottom: 30px;
+  }
+  html #about .profile {
+    width: 33rem;
+  }
+  html #about .info1 {
+    width: 33rem;
+  }
+  html #about .info2 {
+    width: 33rem;
+  }
+  html .inner #skill ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  html .wrap .inner .intro h3 {
+    font-size: 25px;
+  }
+  html .wrap .inner .intro p {
+    font-size: 30px;
+  }
+  html .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+  html #about .info1, html #about .info2 {
+    margin-top: 10%;
+    width: 98%;
+  }
+  html #about .info2 {
+    margin-top: 10%;
+  }
+}
+/* 화면 너비가 430px 이하일떄 */
+@media screen and (max-width: 430px) {
+  html {
+    font-size: 13px;
+  }
+  html .inner #about .profile {
+    padding: 0;
+  }
+  html #about .profile {
+    width: 27rem;
+  }
+  html #about .info1 {
+    width: 27rem;
+  }
+  html #about .info2 {
+    width: 27rem;
+  }
+  html .wrap .inner .intro h3 {
+    font-size: 20px;
+  }
+  html .wrap .inner .intro p {
+    font-size: 25px;
+  }
+  html .swiper {
+    width: 100%;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    -o-object-position: center;
+       object-position: center;
+    object-fit: cover;
+  }
+}
+/* 화면 너비가 400px 이하일떄 */
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 11px;
+  }
+  html .swiper {
+    width: 100%;
+  }
+  html .swiper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    -o-object-position: bottom;
+       object-position: bottom;
+    object-fit: cover;
+  }
+}/*# sourceMappingURL=style.css.map */
